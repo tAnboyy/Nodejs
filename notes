@@ -1,0 +1,48 @@
+//1
+runtime environment to run JS outside browser in the backend
+is a library with built-in modules
+runs on google's v8 engine so ultra fast
+allows for frontend+backend development in JS
+
+//2
+function without name called anonymous function eg- function(){}
+callback function concept
+
+//3
+global objects- __filename absolute path to file being executed
+                __dirname absolute path to directory of file being executed
+
+global functions- setTimeout(function, timeinms).. function executed after timeinms seconds
+                  setInterval(function, timeinms).. function executed after every timeinms seconds
+
+//4
+asynchronous feature ie callbacks concept
+
+//5
+modules contain related code
+
+//6
+core modules ie built in modules
+http module.. used to create server
+
+//7
+one reason nodejs is fast is because it's coded around events
+events and event handlers
+
+//8
+fs(filesystem) module
+every function in fs module has synchronous and asynchronous form
+
+synchronous form blocks execution
+asynchronous form doesn't, instead when data is ready calls callback function
+
+//9
+streams are UNIX pipes that reads data from a source and pipes that data to a destination
+two types- readable and writeable streams
+streams used because reading,writing data happen in chunks
+
+//10
+piping concept
+data 'piped' from source to destination
+
+
