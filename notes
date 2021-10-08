@@ -45,4 +45,9 @@ streams used because reading,writing data happen in chunks
 piping concept
 data 'piped' from source to destination
 
+//11 simple node app
+    12 creating server
+    13 organise app code.. ie create and use modules in the main code file
+    14 routers
+    15 handling requests
 
