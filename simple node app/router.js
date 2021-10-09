@@ -1,4 +1,9 @@
-function route(pathname){
-    console.log("Routing a request for " + pathname);
+function route(handle, pathname) {
+    if (typeof handle[pathname] === 'function') {
+        handle[pathname]();
+    } else {
+        console.log("No handler for " + pathname);
+    }
 }
+
 exports.route = route;

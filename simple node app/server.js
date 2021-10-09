@@ -2,11 +2,11 @@ const http = require('http');
 const url = require('url');
 
 
-function startServer(route) {
+function startServer(route, handle) {
     function onRequest(req, res){
         let pathname = url.parse(req.url).pathname;
         console.log("Request received");
-        route(pathname);
+        route(handle, pathname);
         res.writeHead(200, {"Content": "text/plain"});
         res.write("Hello from the application");
         res.end();
