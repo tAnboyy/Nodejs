@@ -50,4 +50,6 @@ data 'piped' from source to destination
     13 organise app code.. ie create and use modules in the main code file
     14 routers
     15 handling requests
+    16 responding to requests
+    17 posting data
 

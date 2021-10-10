@@ -1,15 +1,18 @@
 const http = require('http');
 const url = require('url');
 
-
 function startServer(route, handle) {
     function onRequest(req, res){
+        let formData = "";
         let pathname = url.parse(req.url).pathname;
-        console.log("Request received");
-        route(handle, pathname);
-        res.writeHead(200, {"Content": "text/plain"});
-        res.write("Hello from the application");
-        res.end();
+        console.log("Request received for " + pathname);
+        req.setEncoding('utf8');
+        req.addListener('data', function(chunk){
+            formData += chunk;
+        });
+        req.addListener("end", function(){
+            route(handle, pathname, res, formData);
+        })
     }
 
     http.createServer(onRequest).listen(8888);
